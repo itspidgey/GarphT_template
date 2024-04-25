@@ -23,11 +23,12 @@ public:
     void AddEdge(string vertexA, string vertexB, T weight);
     
     // Returns weight between two vertices
-    T GetWeight(string vertexA, string vertexB);
+    T* GetWeight(string vertexA, string vertexB);
     
     // Returns queue of vertices connected to vertex
     queue<string> GetToVertices(string vertex);
 private:
+    //            vertex1,              vertex2, weight
     unordered_map<string, unordered_map<string, T>> graph;
     unordered_set<string> vertices;
 };
